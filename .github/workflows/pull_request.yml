@@ -33,6 +33,8 @@ jobs:
           touch something
           git add .
           git commit -m "Added a file"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
             
 
       # Runs a set of commands using the runners shell
