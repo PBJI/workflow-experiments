@@ -22,9 +22,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - with: |
-          
-          
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -41,6 +38,8 @@ jobs:
           git commit -m "Added a file"
       - name: Push changes
         uses: ad-m/github-push-action@master
+        with: 
+          github_token: ${{ secrets.TEST_PAT }}
             
 
       # Runs a set of commands using the runners shell
