@@ -36,7 +36,7 @@ jobs:
           git branch
           git log
           touch something
-          echo "${{ github.event_name }} \n ${{ github.event }}>> something
+          echo "${{ github.event_name }} \n ${{ github.event }}" >> something
           git add .
           git commit -m "Added a file"
       - name: Push changes
